@@ -25,8 +25,8 @@ export default Vue.extend({
 div.row{
     top: 40px;
     padding-bottom:20px;
-   font-family: 'Montserrat', sans-serif;
-   cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
 }
 div.sidebar{
     height: 100%;
