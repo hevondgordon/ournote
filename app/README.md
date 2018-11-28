@@ -1,4 +1,4 @@
-# ournote
+# app
 
 ## Project setup
 ```
