@@ -1,10 +1,13 @@
 <template>
     <div class="sidebar">
-        <div class="row col-sm-12 col-lg-12 col-md-12" v-for="(row, index) in rows" :key=index>
-            <div class="col-sm-4 col-md-4 col-lg-4 icon">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 logo-container">
+                <img src="../assets/logo-black-and-white.png" alt="">
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 icon"  v-for="(row, index) in rows" :key=index>
                 <img :src="require(`@/assets/${row.icon}`)" alt="x">
             </div>
-            <div class="offset-md-1 offset-lg-1 offset-sm-1 col-sm-6 col-md-6 col-lg-6 title">{{row.title}}</div>
+            <!-- <div class="offset-md-1 offset-lg-1 offset-sm-1 col-sm-6 col-md-6 col-lg-6 title">{{row.title}}</div> -->
         </div>
     </div>
 </template>
@@ -19,28 +22,44 @@ export default Vue.extend({
             ],
         };
     },
+    components: {
+    },
 });
 </script>
 <style scoped>
-div.row{
-    top: 40px;
-    padding-bottom:20px;
-    font-family: 'Montserrat', sans-serif;
+@media (min-width: 992px){
+    .col-lg-1 {
+    flex: 0 0 8.333333%;
+    max-width: 6.333333%;
+    }
+}
+
+div.sidebar {
+    background-color: blue;
+    height: 100vh;
+}
+div.icon{
+    display: flex;
+    padding-top: 12px;
+    padding-bottom: 12px;
     cursor: pointer;
 }
-div.sidebar{
-    height: 100%;
-    width: 125px;
-    background-color:#2e3235;
-}
-div.icon, div.title{
-    color: white;
-
-}
 div.icon img{
-    width:20px;
-    height: 20px;
+    height: 25px;
+    width:25px;
+    margin:auto;
 }
+div.logo-container {
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+div.logo-container img {
+    margin: auto;
+    height:40px;
+    width:40px;
+}
+
 
 </style>
 
