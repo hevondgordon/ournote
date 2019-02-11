@@ -18,6 +18,6 @@ export default new Vuex.Store({
     },
   },
   getters: {
-    getActiveNote: (state) => state.activeNote,
+    activeNote: (state) => state.activeNote,
   },
 });
