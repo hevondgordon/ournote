@@ -42,7 +42,6 @@ export default new Vuex.Store({
     updateSearchResults(state, searchInput) {
       state.searching = true;
       const searchResults = state.notes.filter((item) => item.note.match(searchInput));
-      console.log(searchResults);
       state.searchResults = searchResults;
     },
     disableSearch(state) {
